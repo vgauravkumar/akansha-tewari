@@ -184,9 +184,8 @@ section{padding:90px 5%;}
 .slot-label{font-size:0.78rem;font-weight:700;color:var(--navy);margin-bottom:10px;display:block;}
 .slots-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:16px;}
 .slot-btn{background:var(--cream);border:1.5px solid var(--border);border-radius:8px;padding:9px 4px;font-family:'Nunito Sans',sans-serif;font-size:0.78rem;color:var(--body-text);cursor:pointer;text-align:center;transition:all 0.18s;}
-.slot-btn:hover:not(.unavailable):not(.selected){border-color:var(--teal);background:var(--teal-pale);color:var(--teal);}
+.slot-btn:hover:not(.selected){border-color:var(--teal);background:var(--teal-pale);color:var(--teal);}
 .slot-btn.selected{background:var(--teal);border-color:var(--teal);color:white;font-weight:700;}
-.slot-btn.unavailable{opacity:0.35;cursor:not-allowed;text-decoration:line-through;}
 .form-submit{width:100%;padding:14px;background:linear-gradient(135deg,var(--teal) 0%,var(--navy) 100%);color:white;border:none;border-radius:8px;font-family:'Nunito Sans',sans-serif;font-size:0.95rem;font-weight:700;cursor:pointer;transition:opacity 0.2s,transform 0.15s;display:flex;align-items:center;justify-content:center;gap:8px;margin-top:6px;}
 .form-submit:hover{opacity:0.92;transform:translateY(-1px);}
 .form-submit:disabled{opacity:0.55;cursor:not-allowed;transform:none;}
@@ -247,6 +246,32 @@ footer{background:var(--charcoal);color:rgba(255,255,255,0.7);padding:64px 5% 32
 .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:0.77rem;}
 .footer-bottom .reg{color:rgba(255,255,255,0.35);}
 
+/* FLOATING WHATSAPP */
+.whatsapp-float{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  z-index:450;
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  background:#25D366;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 10px 28px rgba(0,0,0,0.22);
+  transition:transform 0.2s,box-shadow 0.2s;
+}
+.whatsapp-float:hover{
+  transform:translateY(-2px) scale(1.02);
+  box-shadow:0 14px 32px rgba(0,0,0,0.26);
+}
+.whatsapp-float svg{
+  width:31px;
+  height:31px;
+  fill:white;
+}
+
 /* ANIMATIONS */
 .fade-up{opacity:0;transform:translateY(28px);transition:opacity 0.65s ease,transform 0.65s ease;}
 .fade-up.visible{opacity:1;transform:translateY(0);}
@@ -280,6 +305,8 @@ footer{background:var(--charcoal);color:rgba(255,255,255,0.7);padding:64px 5% 32
   .slots-grid{grid-template-columns:repeat(2,1fr);}
   .footer-top{grid-template-columns:1fr;gap:2rem;}
   .qual-grid{grid-template-columns:1fr;}
+  .whatsapp-float{right:12px;bottom:12px;width:54px;height:54px;}
+  .whatsapp-float svg{width:29px;height:29px;}
 }
 </style>
 </head>
@@ -325,8 +352,8 @@ footer{background:var(--charcoal);color:rgba(255,255,255,0.7);padding:64px 5% 32
     <div class="fade-up">
       <div class="hero-eyebrow">Lucknow's Premier ENT Specialist</div>
       <h1 class="hero-doctor-name">Dr. Akansha<span>Tewari</span></h1>
-      <p class="hero-designation">MS ENT &nbsp;·&nbsp; DNB ENT &nbsp;·&nbsp; Fellow AIIMS &nbsp;·&nbsp; Reg. No. 76760</p>
-      <p class="hero-tagline">Advanced ENT, Vertigo & Allergy care rooted in compassion, precision, and over 9 years of clinical excellence.</p>
+      <p class="hero-designation">MS ENT &nbsp;·&nbsp; DNB ENT &nbsp;·&nbsp; Fellow AIIMS</p>
+      <p class="hero-tagline">Advanced ENT, Vertigo & Allergy care rooted in compassion, precision, and over 15 years of clinical excellence.</p>
       <div class="hero-actions">
         <a href="#booking" class="btn-gold">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zM7 11h5v5H7z"/></svg>
@@ -335,10 +362,10 @@ footer{background:var(--charcoal);color:rgba(255,255,255,0.7);padding:64px 5% 32
         <a href="#about" class="btn-ghost">Meet the Doctor</a>
       </div>
       <div class="hero-creds">
-        <div class="hero-cred"><span class="hero-cred-val">9+</span><span class="hero-cred-lbl">Years Experience</span></div>
+        <div class="hero-cred"><span class="hero-cred-val">15+</span><span class="hero-cred-lbl">Years Experience</span></div>
         <div class="hero-cred"><span class="hero-cred-val">AIIMS</span><span class="hero-cred-lbl">Fellowship</span></div>
         <div class="hero-cred"><span class="hero-cred-val">3</span><span class="hero-cred-lbl">Specialisations</span></div>
-        <div class="hero-cred"><span class="hero-cred-val">2</span><span class="hero-cred-lbl">Publications</span></div>
+        <div class="hero-cred"><span class="hero-cred-val">200+</span><span class="hero-cred-lbl">Surgeries</span></div>
       </div>
     </div>
     <div class="hero-photo-wrap fade-up" style="transition-delay:0.2s">
@@ -442,16 +469,16 @@ footer{background:var(--charcoal);color:rgba(255,255,255,0.7);padding:64px 5% 32
         <div class="about-img-corner"></div>
         <img class="about-img-main" src="https://lh3.googleusercontent.com/p/AF1QipPTHO8SEZDgrQLizwQ_WusknHHNS_kP_PnTDux2=s1354-k-no" alt="HealthNest Clinic – Compassionate Care" loading="lazy">
         <div class="about-img-badge">
-          <div class="about-img-badge-val">9+</div>
+          <div class="about-img-badge-val">15+</div>
           <div class="about-img-badge-lbl">Years of Excellence</div>
         </div>
       </div>
       <div class="fade-up" style="transition-delay:0.15s">
         <span class="section-label">About the Doctor</span>
         <h2 class="about-name">Dr. Akansha<em>Tewari</em></h2>
-        <p class="about-reg">Registration No. 76760 &nbsp;|&nbsp; Lucknow, Uttar Pradesh</p>
+        <p class="about-reg">Lucknow, Uttar Pradesh</p>
         <div class="divider"></div>
-        <p class="about-bio">At HealthNest Clinic, we believe every patient deserves to be truly heard. Dr. Akansha Tewari brings over 9 years of clinical expertise, advanced subspeciality training from AIIMS, and a deeply patient-centred philosophy to every consultation.</p>
+        <p class="about-bio">At HealthNest Clinic, we believe every patient deserves to be truly heard. Dr. Akansha Tewari brings over 15 years of clinical expertise, advanced subspeciality training from AIIMS, and a deeply patient-centred philosophy to every consultation.</p>
         <p class="about-bio">Whether you're managing chronic sinusitis, experiencing vertigo, or dealing with a long-standing allergy — you are in highly capable and compassionate hands.</p>
 
         <h4 style="font-family:'Playfair Display',serif;font-size:1rem;color:var(--navy);margin-bottom:0.75rem;font-weight:600;">Qualifications & Training</h4>
@@ -515,25 +542,21 @@ footer{background:var(--charcoal);color:rgba(255,255,255,0.7);padding:64px 5% 32
             <tr><td>Sunday</td><td>10:00 AM – 01:00 PM</td></tr>
           </table>
           <div class="contact-links">
-            <a href="tel:+91-9120098828" class="contact-link-item">
-              <div class="contact-link-icon"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.74 21 3 13.26 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div>
-              <div><div class="contact-link-lbl">Call / WhatsApp</div><div class="contact-link-val">+91-9120098828</div></div>
-            </a>
             <a href="tel:+91-8382811224" class="contact-link-item">
               <div class="contact-link-icon"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.74 21 3 13.26 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div>
-              <div><div class="contact-link-lbl">Alternate Number</div><div class="contact-link-val">+91-8382811224</div></div>
+              <div><div class="contact-link-lbl">Call / WhatsApp</div><div class="contact-link-val">+91-8382811224</div></div>
+            </a>
+            <a href="tel:+91-9120098828" class="contact-link-item">
+              <div class="contact-link-icon"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.74 21 3 13.26 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div>
+              <div><div class="contact-link-lbl">Alternate Number</div><div class="contact-link-val">+91-9120098828</div></div>
             </a>
             <a href="https://maps.app.goo.gl/pvojNpdKXmXUcmTR8" target="_blank" class="contact-link-item">
               <div class="contact-link-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
               <div><div class="contact-link-lbl">Address</div><div class="contact-link-val">Chandra Panorama, Shop 1A, Golf City, Lucknow</div></div>
             </a>
-            <a href="https://www.youtube.com/@ENTInsights" target="_blank" class="contact-link-item">
-              <div class="contact-link-icon"><svg viewBox="0 0 24 24"><path d="M21.58 7.19a2.76 2.76 0 00-1.94-1.95C18.01 5 12 5 12 5s-6.01 0-7.64.24a2.76 2.76 0 00-1.94 1.95A28.9 28.9 0 002 12a28.9 28.9 0 00.42 4.81 2.76 2.76 0 001.94 1.95C5.99 19 12 19 12 19s6.01 0 7.64-.24a2.76 2.76 0 001.94-1.95A28.9 28.9 0 0022 12a28.9 28.9 0 00-.42-4.81zM10 15V9l5.2 3-5.2 3z"/></svg></div>
-              <div><div class="contact-link-lbl">YouTube</div><div class="contact-link-val">@ENTInsights</div></div>
-            </a>
-            <a href="https://www.instagram.com/entinsights" target="_blank" class="contact-link-item">
+            <a href="https://www.instagram.com/healthnestclinic_lucknow/" target="_blank" class="contact-link-item">
               <div class="contact-link-icon"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
-              <div><div class="contact-link-lbl">Instagram</div><div class="contact-link-val">@entinsights</div></div>
+              <div><div class="contact-link-lbl">Instagram</div><div class="contact-link-val">@healthnestclinic_lucknow</div></div>
             </a>
           </div>
         </div>
@@ -596,7 +619,7 @@ footer{background:var(--charcoal);color:rgba(255,255,255,0.7);padding:64px 5% 32
       <div class="fade-up">
         <div class="faq-item"><button class="faq-q">Where does Dr. Tewari practice?<svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></button><div class="faq-a">She practices at HealthNest Clinic, Chandra Panorama, Shop 1A (Ground Floor), Golf City, Sector B Ansal API, Lucknow, Uttar Pradesh.</div></div>
         <div class="faq-item"><button class="faq-q">What are her qualifications?<svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></button><div class="faq-a">Dr. Tewari holds MBBS and MS ENT from KGMU Lucknow (2022), DNB ENT from the National Board, and a Fellowship in Allergy & Immunology from AIIMS. She is also a Certified Vertigo & Imbalance Disorder Specialist.</div></div>
-        <div class="faq-item"><button class="faq-q">How many years of experience does she have?<svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></button><div class="faq-a">Over 9 years of overall clinical experience, with advanced subspeciality training in allergy and vertigo management.</div></div>
+        <div class="faq-item"><button class="faq-q">How many years of experience does she have?<svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></button><div class="faq-a">Over 15 years of overall clinical experience, with advanced subspeciality training in allergy and vertigo management.</div></div>
         <div class="faq-item"><button class="faq-q">What are the consultation timings?<svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></button><div class="faq-a">Monday to Saturday: 5:30 PM – 8:30 PM. Sundays: 10:00 AM – 1:00 PM. Walk-ins are always welcome.</div></div>
         <div class="faq-item"><button class="faq-q">How do I book an appointment?<svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></button><div class="faq-a">Use the online booking form above, or simply walk in during consultation hours. We'll confirm via phone or WhatsApp.</div></div>
         <div class="faq-item"><button class="faq-q">Are online consultations available?<svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></button><div class="faq-a">Yes. Select "Online Consultation" in the booking form and we'll arrange a virtual session at a convenient time.</div></div>
@@ -607,15 +630,14 @@ footer{background:var(--charcoal);color:rgba(255,255,255,0.7);padding:64px 5% 32
         <img class="faq-aside-img" src="https://images.pexels.com/photos/5214958/pexels-photo-5214958.jpeg?auto=compress&cs=tinysrgb&w=600&h=260&fit=crop" alt="Doctor consultation" loading="lazy">
         <div class="faq-aside-body">
           <h3>Still have questions?</h3>
-          <p>Our team is happy to assist before your visit. Call or WhatsApp us at +91-9120098828 or +91-8382811224, or visit us in person during clinic hours.</p>
+          <p>Our team is happy to assist before your visit. Call or WhatsApp us at +91-8382811224 or +91-9120098828, or visit us in person during clinic hours.</p>
           <a href="https://www.google.com/maps/search/?api=1&query=Chandra+Panorama+Golf+City+Lucknow" target="_blank" class="btn-primary" style="text-decoration:none;margin-bottom:10px;display:inline-flex;">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="white"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
             Get Directions
           </a>
           <p style="font-size:0.78rem;color:rgba(255,255,255,0.5);margin:1.4rem 0 0.6rem;">Follow for health tips & updates</p>
           <div class="faq-social">
-            <a href="https://www.youtube.com/@ENTInsights" target="_blank" class="social-btn"><svg viewBox="0 0 24 24"><path d="M21.58 7.19a2.76 2.76 0 00-1.94-1.95C18.01 5 12 5 12 5s-6.01 0-7.64.24a2.76 2.76 0 00-1.94 1.95A28.9 28.9 0 002 12a28.9 28.9 0 00.42 4.81 2.76 2.76 0 001.94 1.95C5.99 19 12 19 12 19s6.01 0 7.64-.24a2.76 2.76 0 001.94-1.95A28.9 28.9 0 0022 12a28.9 28.9 0 00-.42-4.81zM10 15V9l5.2 3-5.2 3z"/></svg>YouTube</a>
-            <a href="https://www.instagram.com/entinsights" target="_blank" class="social-btn"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>Instagram</a>
+            <a href="https://www.instagram.com/healthnestclinic_lucknow/" target="_blank" class="social-btn"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>Instagram</a>
           </div>
         </div>
       </div>
@@ -674,10 +696,7 @@ footer{background:var(--charcoal);color:rgba(255,255,255,0.7);padding:64px 5% 32
         <div class="footer-brand-tag">Advanced ENT · Vertigo · Allergy Centre</div>
         <p class="footer-desc">Led by Dr. Akansha Tewari, HealthNest Clinic delivers compassionate, evidence-based ENT care in Lucknow, UP.</p>
         <div class="footer-social">
-          <a href="https://www.youtube.com/@ENTInsights" target="_blank" class="footer-social-link" title="YouTube">
-            <svg viewBox="0 0 24 24"><path d="M21.58 7.19a2.76 2.76 0 00-1.94-1.95C18.01 5 12 5 12 5s-6.01 0-7.64.24a2.76 2.76 0 00-1.94 1.95A28.9 28.9 0 002 12a28.9 28.9 0 00.42 4.81 2.76 2.76 0 001.94 1.95C5.99 19 12 19 12 19s6.01 0 7.64-.24a2.76 2.76 0 001.94-1.95A28.9 28.9 0 0022 12a28.9 28.9 0 00-.42-4.81zM10 15V9l5.2 3-5.2 3z"/></svg>
-          </a>
-          <a href="https://www.instagram.com/entinsights" target="_blank" class="footer-social-link" title="Instagram">
+          <a href="https://www.instagram.com/healthnestclinic_lucknow/" target="_blank" class="footer-social-link" title="Instagram">
             <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
           </a>
         </div>
@@ -697,10 +716,9 @@ footer{background:var(--charcoal);color:rgba(255,255,255,0.7);padding:64px 5% 32
         <ul class="footer-links">
           <li><a>Mon – Sat: 5:30 PM – 8:30 PM</a></li>
           <li><a>Sunday: 10:00 AM – 1:00 PM</a></li>
-          <li><a href="tel:+91-9120098828">Call: +91 +91-9120098828</a></li>
-          <li><a href="tel:+91-8382811224">Alt: +91 +91-8382811224</a></li>
+          <li><a href="tel:+91-8382811224">Call: +91-8382811224</a></li>
+          <li><a href="tel:+91-9120098828">Alt: +91-9120098828</a></li>
           <li style="margin-top:0.8rem;"><a href="https://www.google.com/maps/search/?api=1&query=Chandra+Panorama+Golf+City+Lucknow" target="_blank">Golf City, Lucknow – 226030</a></li>
-          <li><a>Reg. No: 76760</a></li>
         </ul>
       </div>
     </div>
@@ -710,6 +728,19 @@ footer{background:var(--charcoal);color:rgba(255,255,255,0.7);padding:64px 5% 32
     </div>
   </div>
 </footer>
+
+<a
+  href="https://wa.me/918382811224?text=Hello%20Doctor%2C%20I%E2%80%99d%20like%20to%20book%20an%20appointment%20for%20a%20consultation.%20Please%20let%20me%20know%20your%20available%20timings.%20Thank%20you."
+  target="_blank"
+  rel="noopener noreferrer"
+  class="whatsapp-float"
+  aria-label="Chat on WhatsApp"
+  title="Chat on WhatsApp">
+  <svg viewBox="0 0 16 16" aria-hidden="true">
+    <path d="M13.601 2.326A7.854 7.854 0 0 0 8.034 0C3.64 0 .067 3.574.067 7.968a7.94 7.94 0 0 0 1.067 3.95L0 16l4.188-1.1a7.953 7.953 0 0 0 3.81.97h.003c4.394 0 7.967-3.574 7.967-7.968a7.95 7.95 0 0 0-2.367-5.576zm-5.567 12.22h-.003a6.62 6.62 0 0 1-3.377-.92l-.242-.144-2.484.652.662-2.42-.157-.248a6.61 6.61 0 0 1-1.015-3.525c0-3.661 2.977-6.638 6.639-6.638a6.6 6.6 0 0 1 4.689 1.943 6.6 6.6 0 0 1 1.944 4.689c-.001 3.662-2.978 6.64-6.64 6.64z"/>
+    <path d="M11.318 9.537c-.2-.1-1.183-.584-1.366-.651-.183-.067-.317-.1-.45.1-.134.2-.517.65-.633.784-.117.134-.233.15-.433.05-.2-.1-.844-.311-1.607-.99-.594-.529-.995-1.183-1.112-1.383-.116-.2-.012-.308.088-.408.09-.089.2-.233.3-.35.1-.116.133-.2.2-.334.066-.133.033-.25-.017-.35-.05-.1-.45-1.084-.616-1.484-.161-.387-.325-.334-.45-.34l-.383-.006a.733.733 0 0 0-.533.25c-.183.2-.7.684-.7 1.667 0 .984.717 1.934.817 2.067.1.133 1.41 2.153 3.417 3.02.478.206.85.329 1.14.421.479.152.915.13 1.26.079.385-.058 1.183-.484 1.35-.95.166-.467.166-.867.116-.95-.05-.084-.183-.134-.383-.234z"/>
+  </svg>
+</a>
 
 <script>
 window.addEventListener('scroll',()=>{document.getElementById('mainNav').classList.toggle('scrolled',window.scrollY>20);});
@@ -727,9 +758,8 @@ document.querySelectorAll('.faq-q').forEach(btn=>{
   });
 });
 
-const weekdaySlots=['05:30 PM','06:00 PM','06:30 PM','07:00 PM','07:30 PM','08:00 PM'];
-const sundaySlots=['10:00 AM','10:30 AM','11:00 AM','11:30 AM','12:00 PM','12:30 PM'];
-const unavailable=['06:30 PM','11:00 AM'];
+const weekdaySlots=['05:30 PM','06:00 PM','06:30 PM','07:00 PM','07:30 PM','08:00 PM','08:30 PM'];
+const sundaySlots=['10:00 AM','10:30 AM','11:00 AM','11:30 AM','12:00 PM','12:30 PM','01:00 PM'];
 let selectedSlot='';
 
 function renderSlots(dow){
@@ -739,16 +769,14 @@ function renderSlots(dow){
   slots.forEach(slot=>{
     const btn=document.createElement('button');
     btn.type='button';
-    btn.className='slot-btn'+(unavailable.includes(slot)?' unavailable':'');
+    btn.className='slot-btn';
     btn.textContent=slot;
-    if(!unavailable.includes(slot)){
-      btn.addEventListener('click',()=>{
-        document.querySelectorAll('.slot-btn').forEach(b=>b.classList.remove('selected'));
-        btn.classList.add('selected');
-        selectedSlot=slot;
-        document.getElementById('selectedSlotInput').value=slot;
-      });
-    }
+    btn.addEventListener('click',()=>{
+      document.querySelectorAll('.slot-btn').forEach(b=>b.classList.remove('selected'));
+      btn.classList.add('selected');
+      selectedSlot=slot;
+      document.getElementById('selectedSlotInput').value=slot;
+    });
     grid.appendChild(btn);
   });
   selectedSlot='';
