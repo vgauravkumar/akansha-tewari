@@ -59,10 +59,10 @@ nav.scrolled{box-shadow:0 4px 28px var(--shadow-navy);}
 .hero-inner{position:relative;z-index:2;max-width:1200px;margin:0 auto;width:100%;padding:110px 5% 80px;display:grid;grid-template-columns:1.1fr 0.9fr;gap:4rem;align-items:center;}
 .hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(201,148,58,0.18);color:var(--gold-light);padding:6px 14px;border-radius:20px;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:1.4rem;border:1px solid rgba(201,148,58,0.3);}
 .hero-eyebrow::before{content:'';width:6px;height:6px;background:var(--gold);border-radius:50%;}
-.hero-doctor-name{font-family:'Playfair Display',serif;font-size:clamp(3rem,6vw,5rem);font-weight:700;line-height:1.05;color:white;margin-bottom:0.4rem;letter-spacing:-0.02em;}
-.hero-doctor-name span{color:var(--gold-light);display:block;font-style:italic;font-weight:500;}
-.hero-designation{font-size:0.9rem;color:rgba(255,255,255,0.6);letter-spacing:0.04em;margin-bottom:0.9rem;font-weight:400;}
-.hero-tagline{font-size:clamp(1rem,2vw,1.2rem);color:rgba(255,255,255,0.85);line-height:1.6;margin-bottom:2rem;font-weight:300;max-width:460px;}
+.hero-headline{font-family:'Playfair Display',serif;font-size:clamp(2.35rem,4.9vw,4.2rem);font-weight:700;line-height:1.08;color:white;margin-bottom:0.65rem;letter-spacing:-0.02em;max-width:680px;}
+.hero-tagline{font-size:clamp(1rem,2vw,1.15rem);color:rgba(255,255,255,0.85);line-height:1.7;margin-bottom:1.4rem;font-weight:300;max-width:620px;}
+.hero-conditions{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:2rem;max-width:680px;}
+.hero-condition-pill{background:rgba(255,255,255,0.11);color:rgba(255,255,255,0.92);border:1px solid rgba(255,255,255,0.22);border-radius:999px;padding:7px 12px;font-size:0.75rem;font-weight:700;letter-spacing:0.02em;}
 .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:2.5rem;}
 .btn-gold{background:var(--gold);color:var(--navy);padding:14px 28px;border-radius:7px;text-decoration:none;font-size:0.9rem;font-weight:700;transition:all 0.2s;border:2px solid var(--gold);display:inline-flex;align-items:center;gap:8px;}
 .btn-gold:hover{background:var(--gold-light);border-color:var(--gold-light);transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,148,58,0.35);}
@@ -75,15 +75,18 @@ nav.scrolled{box-shadow:0 4px 28px var(--shadow-navy);}
 .hero-cred-val{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:var(--gold-light);line-height:1;}
 .hero-cred-lbl{font-size:0.7rem;color:rgba(255,255,255,0.55);margin-top:3px;font-weight:400;}
 
-/* Doctor photo */
-.hero-photo-wrap{position:relative;display:flex;justify-content:center;}
-.hero-photo-frame{position:relative;width:100%;max-width:400px;border-radius:24px;overflow:hidden;box-shadow:0 32px 80px rgba(0,0,0,0.5);border:3px solid rgba(201,148,58,0.4);}
-.hero-photo-frame img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;display:block;}
-.hero-photo-badge{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);background:rgba(26,46,59,0.92);backdrop-filter:blur(10px);border:1px solid rgba(201,148,58,0.4);border-radius:12px;padding:12px 20px;text-align:center;min-width:220px;}
-.hero-photo-badge-name{font-family:'Playfair Display',serif;font-size:1.05rem;color:white;font-weight:600;}
-.hero-photo-badge-qual{font-size:0.72rem;color:var(--gold-light);margin-top:3px;letter-spacing:0.05em;}
-.hero-deco-ring{position:absolute;top:-20px;right:-20px;width:100px;height:100px;border-radius:50%;border:2px solid rgba(201,148,58,0.25);pointer-events:none;}
-.hero-deco-dot{position:absolute;bottom:60px;right:-12px;width:24px;height:24px;border-radius:50%;background:var(--gold);opacity:0.7;}
+.hero-panel{background:rgba(255,255,255,0.09);border:1px solid rgba(255,255,255,0.22);border-radius:20px;padding:1.6rem;box-shadow:0 20px 44px rgba(0,0,0,0.25);backdrop-filter:blur(8px);}
+.hero-panel h3{font-family:'Playfair Display',serif;font-size:1.45rem;color:white;margin-bottom:1rem;}
+.hero-panel-list{list-style:none;display:grid;gap:10px;margin-bottom:1.2rem;}
+.hero-panel-list li{position:relative;padding-left:14px;color:rgba(255,255,255,0.88);font-size:0.84rem;line-height:1.5;}
+.hero-panel-list li::before{content:'';position:absolute;left:0;top:0.62em;width:6px;height:6px;border-radius:50%;background:var(--gold-light);}
+.hero-panel-meta{display:grid;grid-template-columns:1fr;gap:10px;margin-bottom:1.2rem;}
+.hero-panel-meta-row{background:rgba(0,0,0,0.15);border:1px solid rgba(255,255,255,0.13);border-radius:10px;padding:10px 12px;}
+.hero-panel-meta-row span{display:block;font-size:0.67rem;color:rgba(255,255,255,0.62);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:4px;font-weight:700;}
+.hero-panel-meta-row strong{font-size:0.84rem;color:white;line-height:1.4;font-weight:700;}
+.hero-panel-actions{display:flex;gap:10px;flex-wrap:wrap;}
+.hero-panel-actions .btn-primary,.hero-panel-actions .btn-ghost{padding:11px 18px;font-size:0.8rem;}
+.hero-panel-actions .btn-ghost{border-color:rgba(255,255,255,0.42);}
 
 /* TRUST STRIP */
 .trust-strip{background:var(--teal);padding:20px 5%;}
@@ -287,9 +290,8 @@ footer{background:var(--charcoal);color:rgba(255,255,255,0.7);padding:64px 5% 32
   .faq-layout{grid-template-columns:1fr;}
   .map-grid{grid-template-columns:1fr;}
   .hero-inner{grid-template-columns:1fr;gap:2.5rem;}
-  .hero-photo-wrap{order:-1;}
-  .hero-photo-frame{max-width:320px;margin:0 auto;}
   .hero-inner{padding-top:90px;}
+  .hero-panel{max-width:680px;}
   .footer-top{grid-template-columns:1fr 1fr;}
 }
 @media(max-width:700px){
@@ -301,6 +303,9 @@ footer{background:var(--charcoal);color:rgba(255,255,255,0.7);padding:64px 5% 32
   .clinic-strip-item{height:220px;}
   .hero-creds{gap:0;}
   .hero-cred{padding:0 1rem;}
+  .hero-conditions{gap:8px;}
+  .hero-condition-pill{font-size:0.71rem;padding:6px 10px;}
+  .hero-panel{padding:1.2rem;}
   .form-row{grid-template-columns:1fr;}
   .slots-grid{grid-template-columns:repeat(2,1fr);}
   .footer-top{grid-template-columns:1fr;gap:2rem;}
@@ -350,33 +355,63 @@ footer{background:var(--charcoal);color:rgba(255,255,255,0.7);padding:64px 5% 32
   <div class="hero-overlay"></div>
   <div class="hero-inner">
     <div class="fade-up">
-      <div class="hero-eyebrow">Lucknow's Premier ENT Specialist</div>
-      <h1 class="hero-doctor-name">Dr. Akansha<span>Tewari</span></h1>
-      <p class="hero-designation">MS ENT &nbsp;·&nbsp; DNB ENT &nbsp;·&nbsp; Fellow AIIMS</p>
-      <p class="hero-tagline">Advanced ENT, Vertigo & Allergy care rooted in compassion, precision, and over 15 years of clinical excellence.</p>
+      <div class="hero-eyebrow">Patient-First ENT Care in Lucknow</div>
+      <h1 class="hero-headline">Find Relief from ENT, Vertigo, and Allergy Symptoms</h1>
+      <p class="hero-tagline">From recurring throat pain and sinus trouble to dizziness and allergy flare-ups, get focused diagnosis and practical treatment plans in one place.</p>
+      <div class="hero-conditions">
+        <span class="hero-condition-pill">Ear Pain & Infection</span>
+        <span class="hero-condition-pill">Nose Block & Sinus</span>
+        <span class="hero-condition-pill">Pediatric ENT Consultation</span>
+        <span class="hero-condition-pill">Throat Pain & Voice</span>
+        <span class="hero-condition-pill">Vertigo & Dizziness</span>
+        <span class="hero-condition-pill">Allergy & Rhinitis</span>
+        <span class="hero-condition-pill">Hearing Concerns</span>
+      </div>
       <div class="hero-actions">
         <a href="#booking" class="btn-gold">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zM7 11h5v5H7z"/></svg>
           Book Appointment
         </a>
-        <a href="#about" class="btn-ghost">Meet the Doctor</a>
+        <a href="https://www.eka.care/doctor/akansha-tewari-1768801958" target="_blank" class="btn-ghost">Book on Eka Care</a>
+        <a href="https://calendly.com/healthnestclinic" target="_blank" class="btn-ghost">Book online consultation</a>
+        <a href="tel:+91-8382811224" class="btn-ghost">Call Now</a>
       </div>
       <div class="hero-creds">
         <div class="hero-cred"><span class="hero-cred-val">15+</span><span class="hero-cred-lbl">Years Experience</span></div>
-        <div class="hero-cred"><span class="hero-cred-val">AIIMS</span><span class="hero-cred-lbl">Fellowship</span></div>
-        <div class="hero-cred"><span class="hero-cred-val">3</span><span class="hero-cred-lbl">Specialisations</span></div>
         <div class="hero-cred"><span class="hero-cred-val">200+</span><span class="hero-cred-lbl">Surgeries</span></div>
+        <div class="hero-cred"><span class="hero-cred-val">7</span><span class="hero-cred-lbl">Days Slots</span></div>
+        <div class="hero-cred"><span class="hero-cred-val">3</span><span class="hero-cred-lbl">Specialisations</span></div>
       </div>
     </div>
-    <div class="hero-photo-wrap fade-up" style="transition-delay:0.2s">
-      <div class="hero-deco-ring"></div>
-      <div class="hero-deco-dot"></div>
-      <div class="hero-photo-frame">
-        <img src="https://media.licdn.com/dms/image/v2/C4E03AQEjSSZlQMDBXw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1659028626044?e=1778112000&v=beta&t=2PebEVaOQbxEpwj-d3Vxu_idBt57wF5EAAtZt0sbPSg" alt="Dr. Akansha Tewari – ENT Specialist Lucknow">
-        <div class="hero-photo-badge">
-          <div class="hero-photo-badge-name">Dr. Akansha Tewari</div>
-          <div class="hero-photo-badge-qual">MS ENT · DNB · AIIMS Fellow</div>
+    <div class="hero-panel fade-up" style="transition-delay:0.2s">
+      <h3>Conditions & Services You Can Book For</h3>
+      <ul class="hero-panel-list">
+        <li>ENT consultations for adults and Pediatric ENT Consultation for children</li>
+        <li>Sinus, nasal blockage, tonsil and throat issues</li>
+        <li>Vertigo, dizziness and balance assessment</li>
+        <li>Allergy evaluation and immunotherapy guidance</li>
+        <li>Hearing concerns, ear pain and ear infections</li>
+        <li>Online consultation and follow-up care</li>
+      </ul>
+      <div class="hero-panel-meta">
+        <div class="hero-panel-meta-row">
+          <span>Clinic Timings</span>
+          <strong>Mon-Sat: 5:30 PM - 8:30 PM<br>Sun: 10:00 AM - 1:00 PM</strong>
         </div>
+        <div class="hero-panel-meta-row">
+          <span>Primary Number</span>
+          <strong>+91-8382811224</strong>
+        </div>
+        <div class="hero-panel-meta-row">
+          <span>Location</span>
+          <strong>Golf City, Lucknow</strong>
+        </div>
+      </div>
+      <div class="hero-panel-actions">
+        <a href="#booking" class="btn-primary">Book Appointment</a>
+        <a href="https://www.eka.care/doctor/akansha-tewari-1768801958" target="_blank" class="btn-ghost">Book on Eka Care</a>
+        <a href="https://calendly.com/healthnestclinic" target="_blank" class="btn-ghost">Book online consultation</a>
+        <a href="#services" class="btn-ghost">View Services</a>
       </div>
     </div>
   </div>
@@ -385,9 +420,9 @@ footer{background:var(--charcoal);color:rgba(255,255,255,0.7);padding:64px 5% 32
 <!-- TRUST STRIP -->
 <div class="trust-strip">
   <div class="trust-inner">
-    <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>KGMU & AIIMS Trained</div>
+    <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>Same-Day Appointments</div>
     <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>Walk-ins Welcome</div>
-    <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>Online Consultations Available</div>
+    <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>Online Follow-ups Available</div>
     <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M11.5 2C6.81 2 3 5.81 3 10.5S6.81 19 11.5 19h.5v3c4.86-2.34 8-7 8-11.5C20 5.81 16.19 2 11.5 2zm1 14.5h-2v-2h2v2zm0-4h-2c0-3.25 3-3 3-5 0-1.1-.9-2-2-2s-2 .9-2 2h-2c0-2.21 1.79-4 4-4s4 1.79 4 4c0 2.5-3 2.75-3 5z"/></svg>Cash & UPI Accepted</div>
     <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Golf City, Lucknow</div>
   </div>
@@ -400,15 +435,15 @@ footer{background:var(--charcoal);color:rgba(255,255,255,0.7);padding:64px 5% 32
       <span class="section-label">What We Treat</span>
       <h2 class="section-title">Comprehensive <em>Specialised</em> Care</h2>
       <div class="divider"></div>
-      <p class="section-desc">From routine ENT consultations to advanced vertigo management and allergy immunotherapy — expert care under one roof.</p>
+      <p class="section-desc">From routine ENT and Pediatric ENT Consultation to advanced vertigo management and allergy immunotherapy — expert care under one roof.</p>
     </div>
     <div class="services-grid">
       <div class="service-card fade-up">
-        <img class="service-card-img" src="https://img.freepik.com/free-photo/hearing-exam-otolaryngologist-doctor-checking-woman-s-ear-using-otoscope-auriscope-medical-clinic_657921-266.jpg" alt="ENT Consultation" loading="lazy">
+        <img class="service-card-img" src="https://img.freepik.com/free-photo/hearing-exam-otolaryngologist-doctor-checking-woman-s-ear-using-otoscope-auriscope-medical-clinic_657921-266.jpg" alt="ENT and Pediatric ENT Consultation" loading="lazy">
         <div class="service-card-body">
           <div class="service-icon-sm"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg></div>
-          <h3>ENT Consultations</h3>
-          <p>Comprehensive evaluation and treatment for ear, nose & throat conditions including sinusitis, hearing loss, and nasal disorders.</p>
+          <h3>ENT & Pediatric ENT Consultation</h3>
+          <p>Comprehensive evaluation and treatment for adult and child ear, nose & throat conditions including sinusitis, hearing loss, and nasal disorders.</p>
           <span class="service-tag">Core Service</span>
         </div>
       </div>
@@ -467,7 +502,7 @@ footer{background:var(--charcoal);color:rgba(255,255,255,0.7);padding:64px 5% 32
     <div class="about-grid">
       <div class="about-img-wrap fade-up">
         <div class="about-img-corner"></div>
-        <img class="about-img-main" src="https://lh3.googleusercontent.com/p/AF1QipPTHO8SEZDgrQLizwQ_WusknHHNS_kP_PnTDux2=s1354-k-no" alt="HealthNest Clinic – Compassionate Care" loading="lazy">
+        <img class="about-img-main" src="https://media.licdn.com/dms/image/v2/C4E03AQEjSSZlQMDBXw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1659028626044?e=1778112000&v=beta&t=2PebEVaOQbxEpwj-d3Vxu_idBt57wF5EAAtZt0sbPSg" alt="Dr. Akansha Tewari" loading="lazy">
         <div class="about-img-badge">
           <div class="about-img-badge-val">15+</div>
           <div class="about-img-badge-lbl">Years of Excellence</div>
@@ -478,8 +513,8 @@ footer{background:var(--charcoal);color:rgba(255,255,255,0.7);padding:64px 5% 32
         <h2 class="about-name">Dr. Akansha<em>Tewari</em></h2>
         <p class="about-reg">Lucknow, Uttar Pradesh</p>
         <div class="divider"></div>
-        <p class="about-bio">At HealthNest Clinic, we believe every patient deserves to be truly heard. Dr. Akansha Tewari brings over 15 years of clinical expertise, advanced subspeciality training from AIIMS, and a deeply patient-centred philosophy to every consultation.</p>
-        <p class="about-bio">Whether you're managing chronic sinusitis, experiencing vertigo, or dealing with a long-standing allergy — you are in highly capable and compassionate hands.</p>
+        <p class="about-bio">Dr. Akansha Tewari is a senior ENT specialist with over 15 years of clinical experience in diagnosing and treating complex ear, nose, and throat disorders.</p>
+        <p class="about-bio">She has advanced subspeciality training in allergy and vertigo care from AIIMS and is known for evidence-based decisions, clear counselling, and patient-safe surgical care.</p>
 
         <h4 style="font-family:'Playfair Display',serif;font-size:1rem;color:var(--navy);margin-bottom:0.75rem;font-weight:600;">Qualifications & Training</h4>
         <div class="qual-grid">
@@ -542,6 +577,14 @@ footer{background:var(--charcoal);color:rgba(255,255,255,0.7);padding:64px 5% 32
             <tr><td>Sunday</td><td>10:00 AM – 01:00 PM</td></tr>
           </table>
           <div class="contact-links">
+            <a href="https://www.eka.care/doctor/akansha-tewari-1768801958" target="_blank" class="contact-link-item">
+              <div class="contact-link-icon"><svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zM7 11h5v5H7z"/></svg></div>
+              <div><div class="contact-link-lbl">Online Booking</div><div class="contact-link-val">Book on Eka Care</div></div>
+            </a>
+            <a href="https://calendly.com/healthnestclinic" target="_blank" class="contact-link-item">
+              <div class="contact-link-icon"><svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zM12 11l4 2-4 2v-4z"/></svg></div>
+              <div><div class="contact-link-lbl">Online Consultation</div><div class="contact-link-val">Book online consultation</div></div>
+            </a>
             <a href="tel:+91-8382811224" class="contact-link-item">
               <div class="contact-link-icon"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.74 21 3 13.26 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div>
               <div><div class="contact-link-lbl">Call / WhatsApp</div><div class="contact-link-val">+91-8382811224</div></div>
@@ -558,24 +601,34 @@ footer{background:var(--charcoal);color:rgba(255,255,255,0.7);padding:64px 5% 32
               <div class="contact-link-icon"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
               <div><div class="contact-link-lbl">Instagram</div><div class="contact-link-val">@healthnestclinic_lucknow</div></div>
             </a>
+            <a href="https://linkedin.com/in/akanshatewari-ent" target="_blank" class="contact-link-item">
+              <div class="contact-link-icon"><svg viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg></div>
+              <div><div class="contact-link-lbl">LinkedIn</div><div class="contact-link-val">linkedin.com/in/akanshatewari-ent</div></div>
+            </a>
+            <a href="https://www.whatsapp.com/channel/0029VbCEuKG9WtC3MQuyka2n" target="_blank" class="contact-link-item">
+              <div class="contact-link-icon"><svg viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 8.034 0C3.64 0 .067 3.574.067 7.968a7.94 7.94 0 0 0 1.067 3.95L0 16l4.188-1.1a7.953 7.953 0 0 0 3.81.97h.003c4.394 0 7.967-3.574 7.967-7.968a7.95 7.95 0 0 0-2.367-5.576zm-5.567 12.22h-.003a6.62 6.62 0 0 1-3.377-.92l-.242-.144-2.484.652.662-2.42-.157-.248a6.61 6.61 0 0 1-1.015-3.525c0-3.661 2.977-6.638 6.639-6.638a6.6 6.6 0 0 1 4.689 1.943 6.6 6.6 0 0 1 1.944 4.689c-.001 3.662-2.978 6.64-6.64 6.64z"/><path d="M11.318 9.537c-.2-.1-1.183-.584-1.366-.651-.183-.067-.317-.1-.45.1-.134.2-.517.65-.633.784-.117.134-.233.15-.433.05-.2-.1-.844-.311-1.607-.99-.594-.529-.995-1.183-1.112-1.383-.116-.2-.012-.308.088-.408.09-.089.2-.233.3-.35.1-.116.133-.2.2-.334.066-.133.033-.25-.017-.35-.05-.1-.45-1.084-.616-1.484-.161-.387-.325-.334-.45-.34l-.383-.006a.733.733 0 0 0-.533.25c-.183.2-.7.684-.7 1.667 0 .984.717 1.934.817 2.067.1.133 1.41 2.153 3.417 3.02.478.206.85.329 1.14.421.479.152.915.13 1.26.079.385-.058 1.183-.484 1.35-.95.166-.467.166-.867.116-.95-.05-.084-.183-.134-.383-.234z"/></svg></div>
+              <div><div class="contact-link-lbl">WhatsApp Channel</div><div class="contact-link-val">Join for Clinic Updates</div></div>
+            </a>
           </div>
         </div>
       </div>
       <div class="booking-form fade-up" style="transition-delay:0.15s">
         <h3>Reserve Your Slot</h3>
-        <p>Fill in your details and choose a preferred time. We'll confirm via call or WhatsApp.</p>
+        <p>Fill in your details and choose a preferred time. We'll confirm via call or WhatsApp. You can also book instantly on Eka Care or book online consultation.</p>
+        <a href="https://www.eka.care/doctor/akansha-tewari-1768801958" target="_blank" class="btn-outline" style="text-decoration:none;margin-bottom:1.1rem;display:inline-flex;">Book on Eka Care</a>
+        <a href="https://calendly.com/healthnestclinic" target="_blank" class="btn-outline" style="text-decoration:none;margin-bottom:1.1rem;display:inline-flex;">Book online consultation</a>
         <form id="bookingForm" action="https://formspree.io/f/xaqlqqdy" method="POST">
           <div class="form-row">
             <div class="form-group"><label>First Name *</label><input type="text" name="first_name" required placeholder="Priya"></div>
             <div class="form-group"><label>Last Name *</label><input type="text" name="last_name" required placeholder="Sharma"></div>
           </div>
           <div class="form-group"><label>Phone Number *</label><input type="tel" name="phone" required placeholder="+91 98765 43210"></div>
-          <div class="form-group"><label>Email Address</label><input type="email" name="email" placeholder="you@example.com"></div>
           <div class="form-group">
             <label>Primary Concern *</label>
             <select name="concern" required>
               <option value="" disabled selected>Select a condition or service…</option>
               <option>ENT Consultation (General)</option>
+              <option>Pediatric ENT Consultation</option>
               <option>Ear / Hearing Issues</option>
               <option>Nose / Sinus Problems</option>
               <option>Throat / Voice Concerns</option>
@@ -621,8 +674,8 @@ footer{background:var(--charcoal);color:rgba(255,255,255,0.7);padding:64px 5% 32
         <div class="faq-item"><button class="faq-q">What are her qualifications?<svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></button><div class="faq-a">Dr. Tewari holds MBBS and MS ENT from KGMU Lucknow (2022), DNB ENT from the National Board, and a Fellowship in Allergy & Immunology from AIIMS. She is also a Certified Vertigo & Imbalance Disorder Specialist.</div></div>
         <div class="faq-item"><button class="faq-q">How many years of experience does she have?<svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></button><div class="faq-a">Over 15 years of overall clinical experience, with advanced subspeciality training in allergy and vertigo management.</div></div>
         <div class="faq-item"><button class="faq-q">What are the consultation timings?<svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></button><div class="faq-a">Monday to Saturday: 5:30 PM – 8:30 PM. Sundays: 10:00 AM – 1:00 PM. Walk-ins are always welcome.</div></div>
-        <div class="faq-item"><button class="faq-q">How do I book an appointment?<svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></button><div class="faq-a">Use the online booking form above, or simply walk in during consultation hours. We'll confirm via phone or WhatsApp.</div></div>
-        <div class="faq-item"><button class="faq-q">Are online consultations available?<svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></button><div class="faq-a">Yes. Select "Online Consultation" in the booking form and we'll arrange a virtual session at a convenient time.</div></div>
+        <div class="faq-item"><button class="faq-q">How do I book an appointment?<svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></button><div class="faq-a">Use the online booking form above, book directly on Eka Care, book online consultation, or simply walk in during consultation hours. We'll confirm via phone or WhatsApp.</div></div>
+        <div class="faq-item"><button class="faq-q">Are online consultations available?<svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></button><div class="faq-a">Yes. Select "Online Consultation" in the booking form or use the "Book online consultation" option.</div></div>
         <div class="faq-item"><button class="faq-q">What are the consultation fees?<svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></button><div class="faq-a">Fees vary by consultation type and complexity. Please contact the clinic directly for current details.</div></div>
         <div class="faq-item"><button class="faq-q">What payment modes are accepted?<svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></button><div class="faq-a">Cash and UPI payments are accepted at the clinic.</div></div>
       </div>
@@ -638,6 +691,8 @@ footer{background:var(--charcoal);color:rgba(255,255,255,0.7);padding:64px 5% 32
           <p style="font-size:0.78rem;color:rgba(255,255,255,0.5);margin:1.4rem 0 0.6rem;">Follow for health tips & updates</p>
           <div class="faq-social">
             <a href="https://www.instagram.com/healthnestclinic_lucknow/" target="_blank" class="social-btn"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>Instagram</a>
+            <a href="https://linkedin.com/in/akanshatewari-ent" target="_blank" class="social-btn"><svg viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg>LinkedIn</a>
+            <a href="https://www.whatsapp.com/channel/0029VbCEuKG9WtC3MQuyka2n" target="_blank" class="social-btn"><svg viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 8.034 0C3.64 0 .067 3.574.067 7.968a7.94 7.94 0 0 0 1.067 3.95L0 16l4.188-1.1a7.953 7.953 0 0 0 3.81.97h.003c4.394 0 7.967-3.574 7.967-7.968a7.95 7.95 0 0 0-2.367-5.576zm-5.567 12.22h-.003a6.62 6.62 0 0 1-3.377-.92l-.242-.144-2.484.652.662-2.42-.157-.248a6.61 6.61 0 0 1-1.015-3.525c0-3.661 2.977-6.638 6.639-6.638a6.6 6.6 0 0 1 4.689 1.943 6.6 6.6 0 0 1 1.944 4.689c-.001 3.662-2.978 6.64-6.64 6.64z"/><path d="M11.318 9.537c-.2-.1-1.183-.584-1.366-.651-.183-.067-.317-.1-.45.1-.134.2-.517.65-.633.784-.117.134-.233.15-.433.05-.2-.1-.844-.311-1.607-.99-.594-.529-.995-1.183-1.112-1.383-.116-.2-.012-.308.088-.408.09-.089.2-.233.3-.35.1-.116.133-.2.2-.334.066-.133.033-.25-.017-.35-.05-.1-.45-1.084-.616-1.484-.161-.387-.325-.334-.45-.34l-.383-.006a.733.733 0 0 0-.533.25c-.183.2-.7.684-.7 1.667 0 .984.717 1.934.817 2.067.1.133 1.41 2.153 3.417 3.02.478.206.85.329 1.14.421.479.152.915.13 1.26.079.385-.058 1.183-.484 1.35-.95.166-.467.166-.867.116-.95-.05-.084-.183-.134-.383-.234z"/></svg>WhatsApp Channel</a>
           </div>
         </div>
       </div>
@@ -698,6 +753,12 @@ footer{background:var(--charcoal);color:rgba(255,255,255,0.7);padding:64px 5% 32
         <div class="footer-social">
           <a href="https://www.instagram.com/healthnestclinic_lucknow/" target="_blank" class="footer-social-link" title="Instagram">
             <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/akanshatewari-ent" target="_blank" class="footer-social-link" title="LinkedIn">
+            <svg viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg>
+          </a>
+          <a href="https://www.whatsapp.com/channel/0029VbCEuKG9WtC3MQuyka2n" target="_blank" class="footer-social-link" title="WhatsApp Channel">
+            <svg viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 8.034 0C3.64 0 .067 3.574.067 7.968a7.94 7.94 0 0 0 1.067 3.95L0 16l4.188-1.1a7.953 7.953 0 0 0 3.81.97h.003c4.394 0 7.967-3.574 7.967-7.968a7.95 7.95 0 0 0-2.367-5.576zm-5.567 12.22h-.003a6.62 6.62 0 0 1-3.377-.92l-.242-.144-2.484.652.662-2.42-.157-.248a6.61 6.61 0 0 1-1.015-3.525c0-3.661 2.977-6.638 6.639-6.638a6.6 6.6 0 0 1 4.689 1.943 6.6 6.6 0 0 1 1.944 4.689c-.001 3.662-2.978 6.64-6.64 6.64z"/><path d="M11.318 9.537c-.2-.1-1.183-.584-1.366-.651-.183-.067-.317-.1-.45.1-.134.2-.517.65-.633.784-.117.134-.233.15-.433.05-.2-.1-.844-.311-1.607-.99-.594-.529-.995-1.183-1.112-1.383-.116-.2-.012-.308.088-.408.09-.089.2-.233.3-.35.1-.116.133-.2.2-.334.066-.133.033-.25-.017-.35-.05-.1-.45-1.084-.616-1.484-.161-.387-.325-.334-.45-.34l-.383-.006a.733.733 0 0 0-.533.25c-.183.2-.7.684-.7 1.667 0 .984.717 1.934.817 2.067.1.133 1.41 2.153 3.417 3.02.478.206.85.329 1.14.421.479.152.915.13 1.26.079.385-.058 1.183-.484 1.35-.95.166-.467.166-.867.116-.95-.05-.084-.183-.134-.383-.234z"/></svg>
           </a>
         </div>
       </div>
